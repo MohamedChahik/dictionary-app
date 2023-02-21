@@ -1,0 +1,34 @@
+@import '../../styles/theme-variables.scss';
+
+/*Header styles*/
+.header {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px;
+  z-index: 99;
+  box-shadow: 8px 0 25px rgba(0, 0, 0, 0.05);
+
+  @include themify($themes) {
+    background: themed('headerFooterBackground');
+  }
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+/*Layout wrapper styles*/
+
+.layout-wrapper {
+  @include themify($themes) {
+    background: themed('bodyBackgroundColor');
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 78px);
+}

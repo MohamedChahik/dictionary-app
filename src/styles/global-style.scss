@@ -1,0 +1,13 @@
+@import './theme-variables.scss';
+
+.text {
+  color: 'black';
+
+  @include themify($themes) {
+    background: themed('headerFooterBackground');
+    color: (themed('textColor'))
+  }
+
+
+
+}
